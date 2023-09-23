@@ -25,7 +25,7 @@ pip install flask flask-sqlalchemy flask-login
 ## Configure Environment Variable(s)
 
 ```sh
-export FLASK_APP=src
+export FLASK_APP=src/auth
 export FLASK_DEBUG=1 # Omit for production
 ```
 
