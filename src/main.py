@@ -1,28 +1,30 @@
 ## External Import(s) ##
 from flask import Blueprint, render_template
+from flask_login import login_required, current_user
 
 ## Internal Import(s) ##
-from . import db
+# NoOp
 
-# TODO: Comment.
 main = Blueprint("main", __name__)
 
 @main.route("/")
 def index():
     '''
-    TODO
+    Returns index page's HTML.
 
-    :return: TODO
-    :rtype: TODO
+    :return: HTML of page.
+    :rtype: str
     '''
     return render_template("index.html")
 
 @main.route("/profile")
-def profile():
+@login_required
+def profile() -> str:
     '''
-    TODO
+    Returns profile page's HTML.
 
-    :return: TODO
-    :rtype: TODO
+    :return: HTML of page.
+    :rtype: str
     '''
-    return render_template("profile.html")
+    return render_template("profile.html", full_name=current_user.full_name)
+

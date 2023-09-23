@@ -2,9 +2,13 @@
 
 {% block content %}
 	<h1 class="title">
-		Flask Login Example
+		You're on the best damn home page out there! ;)
 	</h1>
 	<h2 class="subtitle">
-		Easy authentication and authorization in Flask.
+		{% if current_user.is_authenticated %}
+			{{ current_user.full_name }} is authenticated.
+		{% else %}
+			Not authenticated.
+		{% endif %}
 	</h2>
 {% endblock %}
