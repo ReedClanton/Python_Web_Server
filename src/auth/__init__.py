@@ -1,4 +1,5 @@
 ## External Import(s) ##
+from os import getenv
 from os.path import abspath, dirname, join
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
@@ -19,8 +20,8 @@ def create_app():
     auth_app = Flask(__name__)
 
     # Initial DB configuration.
-    auth_app.config["SECRET_KEY"] = "some-secret-key"
-    auth_app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{join(abspath(dirname(__file__)), 'database.db')}"
+    auth_app.config["SECRET_KEY"] = getenv("FLASK_CONFIG_SECRET_KEY")
+    auth_app.config["SQLALCHEMY_DATABASE_URI"] = getenv("FLASK_CONFIG_DB_LOCATION")
 
     # Initialize DB with application.
     auth_db.init_app(auth_app)
