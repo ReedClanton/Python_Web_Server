@@ -1,8 +1,16 @@
-# python-flask-user-login
+# Python Web Server
 
-# Environment Setup
+# Run
 
-## Python Virtual Environment
+Applications may be run bia Docker or locally. If you don't know how you should run it, then you should use Docker.
+
+## Docker
+
+To run an application, see the `README.md` file in the application's directory (`<repoRoot>/src/<appName>`).
+
+## Local
+
+### Environment Setup
 
 Create Python virtual environment by running the bellow at the repo root:
 
@@ -22,15 +30,14 @@ Setup virtual environment by installing dependencies:
 pip install flask flask-sqlalchemy flask-login
 ```
 
-## Configure Environment Variable(s)
-
 ```sh
-export FLASK_APP=src/auth
-export FLASK_DEBUG=1 # Omit for production
+export FLASK_APP=src/<appName>
 ```
 
-# Launch Application
+### Launch Application
+
+From application's directory (`<repoRoot>/src/<appName>`), run:
 
 ```sh
-flask run
+python -m flask run --host=0.0.0.0
 ```
