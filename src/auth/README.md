@@ -15,6 +15,6 @@ docker buildx build -t auth:<version> src/auth
 To launch the application, from the repo's root run:
 
 ```sh
-docker run -p 5000:5000 auth:1
+docker run -p 5000:5000 auth:<version>
 ```
 

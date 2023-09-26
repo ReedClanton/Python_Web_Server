@@ -1,6 +1,6 @@
 ## External Import(s) ##
 from flask import Blueprint, render_template, redirect, url_for, request, flash, Response
-from flask_login import login_user, login_required, logout_user
+from flask_login import login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 
 ## Internal Import(s) ##
@@ -92,4 +92,18 @@ def logout() -> str:
     '''
     logout_user()
     return redirect(url_for("main.index"))
-    
+
+@auth.route("/delete", methods=["POST"])
+@login_required
+def delete() -> str:
+    '''
+    Returns HTML of page user is directed to post account deletion.
+
+    :return: HTML of page.
+    :rtype: str
+    '''
+    current_user.delete()
+    auth_db.session.commit()
+    flash("Your account has been deleted.")
+    return redirect(url_for("main.index"))
+

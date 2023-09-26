@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
-{% block content %}
-	<h1 class="title">
-		You're on the best damn home page out there! ;)
-	</h1>
+{% block head %}
+	<h3 class="title">
+		Home
+	</h3>
 	<h2 class="subtitle">
 		{% if current_user.is_authenticated %}
 			{{ current_user.full_name }} is authenticated.
@@ -12,3 +12,8 @@
 		{% endif %}
 	</h2>
 {% endblock %}
+
+{% block body %}
+	<p>Some content here.</p>
+{% endblock %}
+

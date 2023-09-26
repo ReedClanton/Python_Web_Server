@@ -15,3 +15,12 @@ class User(UserMixin, auth_db.Model):
     '''Tracks hashed password.'''
     full_name = auth_db.Column(auth_db.String(1500))
     '''Stores user's full name.'''
+
+    def delete(self) -> None:
+        '''
+        Removes calling instance of this object.
+
+        :return: N/A
+        :rtype: None
+        '''
+        auth_db.session.delete(self)
