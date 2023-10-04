@@ -9,32 +9,32 @@ main = Blueprint("main", __name__)
 
 @main.route("/")
 def index():
-    '''
-    Returns index page's HTML.
+	'''
+	Returns index page's HTML.
 
-    :return: HTML of page.
-    :rtype: str
-    '''
-    return render_template("index.html")
+	:return: HTML of page.
+	:rtype: str
+	'''
+	return render_template("index.html")
 
 @main.route("/profile")
 @login_required
 def profile() -> str:
-    '''
-    Returns profile page's HTML.
+	'''
+	Returns profile page's HTML.
 
-    :return: HTML of page.
-    :rtype: str
-    '''
-    return render_template("profile.html", full_name=current_user.full_name)
+	:return: HTML of page.
+	:rtype: str
+	'''
+	return render_template("profile.html", full_name=current_user.full_name)
 
 @main.route("/workout")
 def workout() -> str:
-    '''
-    Returns workout page's HTML.
+	'''
+	Returns workout page's HTML.
 
-    :return: HTML of page.
-    :rtype: str
-    '''
-    return render_template("workout.html")
+	:return: HTML of page.
+	:rtype: str
+	'''
+	return render_template("workout.html")
 
