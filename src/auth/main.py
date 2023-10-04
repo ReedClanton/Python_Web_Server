@@ -28,3 +28,13 @@ def profile() -> str:
     '''
     return render_template("profile.html", full_name=current_user.full_name)
 
+@main.route("/workout")
+def workout() -> str:
+    '''
+    Returns workout page's HTML.
+
+    :return: HTML of page.
+    :rtype: str
+    '''
+    return render_template("workout.html")
+

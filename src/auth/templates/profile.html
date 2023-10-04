@@ -1,28 +1,33 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+{% extends "main_body_top_column_1_base.html" %}
 
-{% block head %}
-	<h3 class="title">
+{% block main_header %}
+	<h3 class="title" title="Your account page">
 		Welcome to your profile {{ current_user.full_name }}.
 	</h3>
 {% endblock %}
 
-{% block body %}
-	<div class="box">
-		<p>
-			<label for="fname">Name:</label>
-			{{ current_user.full_name }}
-		</p>
-		<p>
-			<label for="email">Email:</label>
-			{{ current_user.email }}
-		</p>
-		<p>
-			<label for="quantity">ID:</label>
-			{{ current_user.id }}
-		</p>
-		<form method="POST" action="/delete">
-			<button class="button is-block is-info is-large is-fullwidth">Delete Account</button>
-		</form>
-	</div>
+{% block main_header_column_1 %}
+	<h4 class="title" title="Account information">
+		Account Information
+	</h4>
+{% endblock %}
+
+{% block main_body_column_1 %}
+	<p>
+		<label for="fname" title="Name of account's owner">Name:</label>
+		{{ current_user.full_name }}
+	</p>
+	<p>
+		<label for="email" title="Account's email address">Email:</label>
+		{{ current_user.email }}
+	</p>
+	<p>
+		<label for="quantity" title="Account's unique ID">ID:</label>
+		{{ current_user.id }}
+	</p>
+	<form method="POST" action="/delete">
+		<button class="button is-block is-info is-large is-fullwidth" title="Delete this account">Delete Account</button>
+	</form>
 {% endblock %}
 

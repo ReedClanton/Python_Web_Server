@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% extends "main_body_top_column_3_base.html" %}
+
+{% block main_header %}
+	<h3 class="title">Workout</h3>
+{% endblock %}
+
+{% block main_header_column_1 %}
+	<h4 class="title" title="Body region selection title">Body Region</h4>
+{% endblock %}
+
+{% block main_body_column_1 %}
+	<nav>
+		<ul id="bodyRegionList">
+			<li>
+				<dfn title="All muscles that have at least one attachment point to the core (i.e. not neck, legs, or arms).">Core</dfn>
+			</li>
+			<li>
+				<dfn title="All muscles that have at least one attachment point to the skull and core.">Neck</dfn>
+			</li>
+			<li>
+				<dfn title="All muscles that have at least one attachment point to an arm.">Arms</dfn>
+			</li>
+			<li>
+				<dfn title="All muscles that have at least one attachment point to a leg or foot.">Legs</dfn>
+			</li>
+		</ul>
+	</nav>
+{% endblock %}
+
+{% block main_header_column_2 %}
+	<h4 class="title" title="Muscle selection title">Muscle</h4>
+{% endblock %}
+
+{% block main_body_column_2 %}
+	<nav>
+		<ul id="muscleList">
+			<li>
+				<dfn title="">Core muscle 1</dfn>
+			</li>
+			<li>
+				<dfn title="">Neck muscle 1</dfn>
+			</li>
+			<li>
+				<dfn title="">Arm muscle 1</dfn>
+			</li>
+			<li>
+				<dfn title="">Leg muscle 1</dfn>
+			</li>
+		</ul>
+	</nav>
+{% endblock %}
+
+{% block main_header_column_3 %}
+	<h4 class="title" title="Exercise type title">Exercise Type</h4>
+{% endblock %}
+
+{% block main_body_column_3 %}
+	<nav>
+		<ul id="exerciseTypeList">
+			<li>
+				<dfn title="">Cardio</dfn>
+			</li>
+			<li>
+				<dfn title="">Olympic Weightlifting</dfn>
+			</li>
+			<li>
+				<dfn title="">Plyometrics</dfn>
+			</li>
+			<li>
+				<dfn title="">Powerlifting</dfn>
+			</li>
+			<li>
+				<dfn title="">Strength</dfn>
+			</li>
+			<li>
+				<dfn title="">Stretching</dfn>
+			</li>
+			<li>
+				<dfn title="">Strongman</dfn>
+			</li>
+		</ul>
+	</nav>
+{% endblock %}
+

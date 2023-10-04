@@ -1,10 +1,9 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+{% extends "main_body_top_column_1_base.html" %}
 
-{% block head %}
-	<h3 class="title">
-		Home
-	</h3>
-	<h2 class="subtitle">
+{% block main_header %}
+	<h3 class="title" title="Site's Home Page Title">Home</h3>
+	<h2 class="subtitle" title="Site's Home Page Subtitle">
 		{% if current_user.is_authenticated %}
 			{{ current_user.full_name }} is authenticated.
 		{% else %}
@@ -13,7 +12,11 @@
 	</h2>
 {% endblock %}
 
-{% block body %}
+{% block main_header_column_1 %}
+	<h4 class="title" title="TODO: Some title here">Content Title</h4>
+{% endblock %}
+
+{% block main_body_column_1 %}
 	<p>Some content here.</p>
 {% endblock %}
 
