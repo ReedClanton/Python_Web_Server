@@ -1,0 +1,82 @@
+/* Navigation Bar */
+
+/** Dark Theme **/
+
+div.nav-bar {
+	/* Defaults */
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333;
+	}
+
+	ul li {
+		float: left;
+	}
+
+	ul li a {
+		display: inline-block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+
+	ul li a:hover:not(.active) {
+		background-color: #000;
+	}
+
+	/* Emphasize Element */
+	ul li a.emphasize {
+		background-color: #04aa6d;
+	}
+
+	/* Allow elements to be right justified */
+	ul li.right {
+		float: right;
+	}
+}
+
+/** Light Theme **/
+
+div.nav-bar.light {
+	/* Defaults */
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		border: 1px solid #e7e7e7;
+		background-color: #f3f3f3;
+	}
+
+	ul li {
+		float: left;
+	}
+
+	ul li a {
+		display: inline-block;
+		color: #666;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+
+	ul li a:hover:not(.active) {
+		background-color: #ddd;
+	}
+
+	/* Emphasize Element */
+	ul a.empnasize {
+		color: white;
+		background-color: #04aa6d;
+	}
+
+	/* Allow Elements to be Right Justified */
+	ul li.right {
+		float: right;
+	}
+}
+

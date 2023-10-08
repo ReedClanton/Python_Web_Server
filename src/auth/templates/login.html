@@ -1,28 +1,35 @@
 <!DOCTYPE html>
-{% extends "main_body_top_column_1_base.html" %}
+{% extends "base.html" %}
 
-{% block main_header %}
-	<h3 class="title">Login</h3>
-{% endblock %}
+{% block body_main %}
+	<h1>
+		Login
+	</h1>
 
-{% block main_body_column_1 %}
 	<form method="POST" action="/login">
-		<div class="field" title="Email associated with existing account">
-			<div class="control">
-				<input class="input is-large" type="email" name="email" placeholder="Your Email" autofocus="">
-			</div>
+		<div title="Email associated with existing account">
+			<input type="email" name="email" placeholder="Your Email" autofocus="" required>
 		</div>
-		<div class="field" title="Password of existing account">
-			<div class="control">
-				<input class="input is-large" type="password" name="password" placeholder="Your Password">
-			</div>
+
+		<br>
+
+		<div title="Password of existing account">
+			<input type="password" name="password" placeholder="Your Password" required>
 		</div>
-		<div class="field" title="Check to reamin logged in (only use if on private device)">
-			<label class="checkbox">
+
+		<br>
+
+		<div title="Check to reamin logged in (only use if on private device)">
+			<label>
 				<input type="checkbox" name="remember">
 				Remember me.
 			</label>
 		</div>
-		<button class="button is-block is-info is-large is-fullwidth" title="Login to your account">Login</button>
+
+		<br>
+
+		<button title="Login to your account">
+			Login
+		</button>
 	</form>
 {% endblock %}
