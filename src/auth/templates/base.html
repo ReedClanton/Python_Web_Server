@@ -8,15 +8,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="keywords" content="rest,web service,user authentication">
 		<meta name="robots" content="index,follow">
-		<link rel="stylesheet" href="static/styles/common.css" />
-		<link rel="stylesheet" href="static/styles/nav-bar.css" />
-		<link rel="stylesheet" href="static/styles/footer.css" />
+		<link rel="stylesheet" href="static/styles/main.css" />
 	</head>
 
 	<body>
 
 		<!-- Navigation Bar -->
-		<div class="nav-bar" title="Site navigation bar">
+		<nav title="Site navigation bar">
 			<ul title="Site navigation bar">
 				<li>
 					<a class="emphasize" href="{{ url_for('main.index') }}" title="Go to site's home page">
@@ -52,94 +50,69 @@
 					</a>
 				</li>
 			</ul>
-		</div>
-
-		<div class="nav-bar light" title="Site navigation bar">
-			<ul title="Site navigation bar">
-				<li>
-					<a class="emphasize" href="{{ url_for('main.index') }}" title="Go to site's home page">
-						Home
-					</a>
-				</li>
-				{% if current_user.is_authenticated %}
-					<li>
-						<a href="{{ url_for('auth.logout') }}" title="Logout of account">
-							Logout
-						</a>
-					</li>
-					<li>
-						<a href="{{ url_for('main.profile') }}" title="Go to your profile page">
-							Profile
-						</a>
-					</li>
-				{% else %}
-					<li>
-						<a href="{{ url_for('auth.signup') }}" title="Go to account creation page">
-							Sign Up
-						</a>
-					</li>
-					<li>
-						<a href="{{ url_for('auth.login') }}" title="Go to account login page">
-							Login
-						</a>
-					</li>
-				{% endif %}
-				<li class="right">
-					<a href="{{ url_for('main.workout') }}" title="Go to workout creation page">
-						Workout Creation
-					</a>
-				</li>
-			</ul>
-		</div>
+		</nav>
 
 		<!-- Site Header -->
 		<header class="body-header">
 			<h1>
-				<strong>Site Name</strong> Here (Body Header)
+				<a href="#"><strong>Site Name</strong> Here (Body Header)</a>
 			</h1>
-			<img src="static/body-header.jpeg" alt="Site header background image." width="1500" height="800">
+			<img src="static/body-header-cropped.jpeg" alt="Site header background image." width="1400" height="300">
 		</header>
 
+		<b class="hr"></b>
+
 		<!-- Main -->
-		<main>
+		<main class="body-main">
 			{% block body_main %}{% endblock %}
 		</main>
 
+		<b class="hr"></b>
+
 		<!-- Site Footer -->
-		<footer>
-			<div>
-				<div class="footerlinks_1"><a href="#">ITEM 1</a></div>
-				<div class="footerlinks_1"><a href="#">ITEM 2</a></div>
-			</div>
+        <footer class="body-footer" title="Site footer">
+            <div title="TODO">
+                <div class="title-link"><a href="#">ITEM 1</a></div>
+                <div class="title-link"><a href="#">ITEM 2</a></div>
+				<div class="title-link"><a href="#">ITEM 3</a></div>
+				<div class="title-link"><a href="#">ITEM 4</a></div>
+            </div>
 
-			<div>
-				<div class="footerlinks_2">
-					<h5>Column 1 Title</h5>
-					<a href="#" class="ga-bottom">Link 1</a><br />
-					<a href="#" class="ga-bottom">Link 2</a><br />
-				</div>
-				<div class="footerlinks_2">
-					<h5>Column 2 Title</h5>
-					<a href="#" class="ga-bottom">Link 1</a><br />
-					<a href="#" class="ga-bottom">Link 2</a><br />
-				</div>
-				<div class="footerlinks_2">
-					<h5>Column 3 Title</h5>
-					<a href="#" class="ga-bottom">Link 1</a><br />
-					<a href="#" class="ga-bottom">Link 2</a><br />
-				</div>
-				<div class="footerlinks_2">
-					<h5>Column 4 Title</h5>
-					<a href="#" target="_blank" class="ga-bottom">Link 1</a><br />
-					<a href="#" target="_blank" class="ga-bottom">Link 2</a><br />
-				</div>
-			</div>
+            <div title="TODO">
+                <div class="list-link">
+                    <h5>Column 1 Title</h5>
+                    <a href="#" class="ga-bottom">Link 1</a><br />
+                    <a href="#" class="ga-bottom">Link 2</a><br />
+					<a href="#" class="ga-bottom">Link 3</a><br />
+					<a href="#" class="ga-bottom">Link 4</a><br />
+                </div>
+                <div class="list-link">
+                    <h5>Column 2 Title</h5>
+                    <a href="#" class="ga-bottom">Link 1</a><br />
+                    <a href="#" class="ga-bottom">Link 3</a><br />
+					<a href="#" class="ga-bottom">Link 3</a><br />
+					<a href="#" class="ga-bottom">Link 4</a><br />
+                </div>
+                <div class="list-link">
+                    <h5>Column 3 Title</h5>
+                    <a href="#" class="ga-bottom">Link 1</a><br />
+                    <a href="#" class="ga-bottom">Link 2</a><br />
+					<a href="#" class="ga-bottom">Link 3</a><br />
+					<a href="#" class="ga-bottom">Link 4</a><br />
+                </div>
+                <div class="list-link">
+					<a href="#" class="ga-bottom"><h5>Column 4 Title (link)</h5></a>
+                    <a href="#" class="ga-bottom">Link 1</a><br />
+                    <a href="#" class="ga-bottom">Link 2</a><br />
+					<a href="#" class="ga-bottom">Link 3</a><br />
+					<a href="#" class="ga-bottom">Link 4</a><br />
+                </div>
+            </div>
 
-			<div class="footertext">
-				<a href="#" class="ga-bottom">Copyright 2023-2023</a> by Reed Clanton. All Rights Reserved.<br />
-				<br />
-			</div>
-		</footer>
+            <div class="footer">
+                <a href="#" class="ga-bottom">Copyright 2023-2023</a> by Reed Clanton. All Rights Reserved.
+            </div>
+        </footer>
 
 	</body>
 </html>
